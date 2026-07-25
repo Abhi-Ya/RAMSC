@@ -6,7 +6,7 @@
     "time": "08:00-10:00",
     "tags": "Academic",
     "cover": "-",
-    "paragraph": "Let's use this as a central working space",
+    "paragraph": "Let's use this as a central working space"
   },
   {
     "title": "Activity 1",
@@ -15,7 +15,7 @@
     "time": "12:00-14:00",
     "tags": "Activity",
     "cover": "-",
-    "paragraph": "Let's use this as a central working space",
+    "paragraph": "Let's use this as a central working space"
   },
   {
     "title": "Wellbeing 1",
@@ -24,7 +24,7 @@
     "time": "14:00-15:00",
     "tags": "Wellbeing",
     "cover": "-",
-    "paragraph": "Let's use this as a central working space",
+    "paragraph": "Let's use this as a central working space"
   },
   {
     "title": "Announcement 1",
@@ -33,6 +33,6 @@
     "time": "14:00-16:00",
     "tags": "Announcement",
     "cover": "-",
-    "paragraph": "Let's use this as a central working space",
+    "paragraph": "Let's use this as a central working space"
   }
 ]
