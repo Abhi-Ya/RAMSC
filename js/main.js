@@ -59,8 +59,14 @@
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
   // Mobile nav
-  const nav = $('#site-nav');
-  const toggle = $('.nav-toggle');
+  const navToggle = document.querySelector('.nav-toggle');
+const siteNav   = document.querySelector('.site-nav');
+
+navToggle.addEventListener('click', () => {
+  const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+  navToggle.setAttribute('aria-expanded', !expanded);
+  siteNav.classList.toggle('open');
+});
   const openNav = () => {
     if (!nav) return;
     nav.classList.add('open');
