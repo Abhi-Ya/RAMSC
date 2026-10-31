@@ -3021,3 +3021,144 @@ main.full-article-container .back-link {
 #calendar .chip {
   font-size: 0.8rem !important;
 }
+
+/* ==========================================================================
+   === DEPARTMENTS ===
+   ========================================================================== */
+.dept-section {
+  background: #204c7c;
+  padding: clamp(2.5rem, 6vw, 4.5rem) clamp(1rem, 4vw, 3rem);
+}
+.dept-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.dept-heading {
+  color: #fff;
+  text-align: center;
+  font-size: clamp(1.6rem, 3vw + 0.8rem, 2.4rem);
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  margin: 0 0 clamp(1.5rem, 4vw, 2.5rem);
+}
+
+.dept-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  align-items: stretch;      /* every card in a row gets the same height */
+}
+@media (max-width: 1024px) {
+  .dept-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 640px) {
+  .dept-grid { grid-template-columns: 1fr; }
+}
+
+.dept-card {
+  --c: #5890b9;                       /* colour is set per card in the HTML */
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  background: #fff;
+  border-radius: 16px;
+  border-top: 6px solid var(--c);
+  padding: clamp(1.25rem, 3vw, 1.75rem);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+}
+.dept-chip {
+  align-self: flex-start;
+  background: var(--c);
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 600;
+  line-height: 1;
+  padding: 0.4rem 0.85rem;
+  border-radius: 999px;
+}
+.dept-title {
+  margin: 0;
+  color: #0d2146;
+  font-size: clamp(1.1rem, 1rem + 0.6vw, 1.35rem);
+  font-weight: 700;
+  line-height: 1.3;
+  overflow-wrap: break-word;
+}
+.dept-text {
+  margin: 0;
+  color: #3d4a5c;
+  font-size: clamp(0.95rem, 0.9rem + 0.3vw, 1.05rem);
+  line-height: 1.85;                  /* Thai needs more line height for tone marks */
+  text-align: left;
+  overflow-wrap: break-word;
+  word-break: normal;
+  text-wrap: pretty;
+}
+.dept-quote {
+  margin: auto 0 0;                   /* pushes the quote to the bottom of the card */
+  padding: 0.8rem 1rem;
+  border-left: 4px solid var(--c);
+  border-radius: 0 8px 8px 0;
+  background: color-mix(in srgb, var(--c) 12%, #fff);
+  color: #1f2a3a;
+  font-size: 0.98rem;
+  font-weight: 500;
+  line-height: 1.7;
+}
+
+/* STRUCTURE ORGANIZATION: fit the whole section in one screen on desktop */
+@media (min-width: 1025px) {
+  #structure-intro {
+    padding: 0;
+    min-height: calc(100vh - 64px);   /* minus the sticky header */
+    display: flex;
+    align-items: center;
+  }
+  #structure-intro .row_contact {
+    width: 100%;
+    gap: 1.25rem;
+    padding: 1.5rem 2rem !important;
+  }
+  #structure-intro .organization-box {
+    padding: 0.6rem 2.5rem;
+  }
+  #structure-intro .vertical-text {
+    font-size: clamp(1.6rem, 3.2vh + 1rem, 2.6rem);
+  }
+  #structure-intro .right_structure img {
+    width: auto !important;
+    height: auto !important;
+    max-width: 100%;
+    /* header 64px + label box ~90px + paddings/gap ~90px */
+    max-height: calc(100vh - 260px);
+    object-fit: contain;
+  }
+}
+
+/* STRUCTURE ORGANIZATION: box hugs its text */
+#structure-intro .left_structure {
+  display: flex;
+  justify-content: center;
+}
+#structure-intro .organization-box {
+  width: fit-content !important;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0.6rem 1.75rem !important;
+  border-radius: 0.5rem;
+}
+#structure-intro .vertical-text {
+  font-size: clamp(1.3rem, 2.2vh + 0.9rem, 2rem);
+  letter-spacing: 0.06em;
+  white-space: nowrap;
+}
+@media (max-width: 640px) {
+  #structure-intro .organization-box {
+    padding: 0.5rem 1.1rem !important;
+  }
+  #structure-intro .vertical-text {
+    font-size: clamp(1.1rem, 5.2vw, 1.5rem);
+    white-space: normal;
+    text-align: center;
+  }
+}
